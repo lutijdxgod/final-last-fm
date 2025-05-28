@@ -1,37 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last.fm clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="root">
+        <header>
+            <div class="now-playing">
+                <img src="https://placehold.co/50" alt="Now Playing" class="track-cover">
+                <div class="track-info">
+                    <p class="track-title">Blinding Lights</p>
+                    <p class="track-artist">The Weeknd</p>
+                </div>
+                <div class="player-controls">
+                    <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                    <button class="control-btn"><i class="fas fa-play"></i></button>
+                    <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </div>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+            <nav class="main-nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Live</a>
+                <a href="#" class="nav-link">Music</a>
+                <a href="#" class="nav-link">Charts</a>
+                <a href="#" class="nav-link">Events</a>
+                <a href="#" class="nav-link">Features</a>
+            </nav>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+            <form class="search-bar">
+                <input type="text" placeholder="Search artists or tracks...">
+                <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+            </form>
+        </header>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <main>
+            <h1 class="main-title">Music</h1>
+
+            <section class="hot-artists">
+                <h2>Hot Right Now</h2>
+                <div class="artist-grid">
+                </div>
+            </section>
+
+            <section class="popular-tracks">
+                <h2>Popular Tracks</h2>
+                <div class="track-grid">
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="/about">About Last.fm</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/jobs">Jobs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="/track-music">Track My Music</a></li>
+                        <li><a href="/support">Community Support</a></li>
+                        <li><a href="/guidelines">Community Guidelines</a></li>
+                        <li><a href="/help">Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>GOODIES</h3>
+                    <ul>
+                        <li><a href="/scrobbler">Download Scrobbler</a></li>
+                        <li><a href="/api">Developer API</a></li>
+                        <li><a href="/free-music">Free Music Downloads</a></li>
+                        <li><a href="/merch">Merchandise</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>ACCOUNT</h3>
+                    <ul>
+                        <li><a href="/inbox">Inbox</a></li>
+                        <li><a href="/settings">Settings</a></li>
+                        <li><a href="/pro">Last.fm Pro</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>FOLLOW US</h3>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/lastfm" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/lastfm" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/lastfm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/lastfm" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <script>document.write(new Date().getFullYear())</script> Last.fm Ltd. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

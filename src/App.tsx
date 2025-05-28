@@ -1,23 +1,17 @@
-import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from './Layout';
+import { Home } from './pages/Home';
+import { Search } from './pages/Search';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+      </Route>
+    </Routes>
+  );
+}
 
-// export default App;
+export default App;
